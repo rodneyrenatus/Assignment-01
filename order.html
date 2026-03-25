@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+</head>
+<body>
+    <h1>Order You Succulents Today!!!!!!!</h1>
+
+    <from>
+        <label for="product">Product: </label>
+        <select name="succulent" id="succulent", required>
+            <option value="">--Select Succulent--</option>
+            <option value="jade">Jade Plant (Crassula ovata)</option>
+            <option value="aloe-vera">Aloe Vera</option>
+            <option value="zebra-haworthia">Zebra Haworthia (Haworthiopsis attenuata)</option>
+            <option value="echeveria">Echeveria</option>
+            <option value="snake">Snake Plant (Draceana trifasciata)</option>
+            <option value="burro-tail">Burros's Tail (Sedum morganianum)</option>
+            <option value="string">String of Pearls (Senecio rowleyanus)</option>
+            <option value="hens">Hens and Chicks (Sempervivum)</option>
+            <option value="panda">Panda Plant (Kalanchoe tomentosa)</option>
+            <option value="Christmas">Christmas Cactus (Schlumbergera)</option>
+        </select>
+
+        <label for="delivery">Delivery Mode: </label>
+        <select name="delivery" id="delivery", required>
+            <option value="">--Select Delivery Mode--</option>
+            <option value="doorstep">Doorstep Delivery</option>
+            <option value="instore">Instore Pickup</option>
+        </select>
+
+        <label for="payment">Payment Method: </label>
+        <select name="payment" id="payment", required>
+            <option value="">--Select Payment Method--</option>
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+            <option value="qr">Qr Code</option>
+        </select>
+
+        <input type="button" value="Submit">
+    </from>
+</body>
+</html>
