@@ -278,8 +278,15 @@ footer a:hover { color: var(--green-dark); }
 }
 
 /* ─── SECTION HEADERS ────────────────────────────────────── */
-.section-header { text-align: center; margin-bottom: 2em; }
-.section-header p { color: var(--text-mid); max-width: 500px; margin: 0 auto; }
+.section-header { 
+  text-align: center; 
+  margin-bottom: 1.5em; 
+}
+.section-header p { 
+  color: var(--text-mid); 
+  max-width: 500px; 
+  margin: 0 auto; 
+}
 
 /* ─── PRODUCT GRID ───────────────────────────────────────── */
 .product-showcase { padding: 50px 0; }
@@ -378,9 +385,31 @@ aside {
   margin: 0 0 1.5em 2em;
 }
 
-aside h2 { font-size: 1.1rem; color: var(--green-dark); margin-bottom: 0.8em; }
-aside h3 { font-size: 0.95rem; margin-top: 1em; }
-aside ul { font-size: 0.87rem; color: var(--text-mid); }
+aside h2 { 
+  font-size: 1.1rem; 
+  color: var(--green-dark); 
+  margin-bottom: 0.8em; 
+}
+
+aside h3 { 
+  font-size: 0.95rem; 
+  margin-top: 1em; 
+}
+
+aside ul { 
+  font-size: 0.87rem; 
+  color: var(--text-mid); 
+}
+
+aside p{
+  background: #f0f7f2;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: var(--green-dark);
+  font-weight: 500;
+  margin-bottom: 0;
+}
 
 .content-clearfix::after { content: ''; display: block; clear: both; }
 
@@ -463,6 +492,7 @@ tr:hover td { background: var(--green-light); }
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-top: 14px;
 }
 
 .form-group label {
@@ -486,6 +516,13 @@ tr:hover td { background: var(--green-light); }
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   appearance: none;
+}
+
+#checkbox{
+  width: auto;
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+  cursor: pointer;
 }
 
 .form-group input:focus,
@@ -557,6 +594,11 @@ legend {
   cursor: pointer;
   letter-spacing: 0.04em;
   transition: background 0.2s, transform 0.12s;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 8px;
 }
 
 .btn-submit:hover { background: var(--green-dark); transform: translateY(-1px); }
@@ -675,8 +717,23 @@ legend {
   margin-bottom: 12px;
 }
 
-.login-hero h2 em { font-style: italic; color: var(--cream); }
-.login-hero p { color: rgba(255,255,255,0.8); font-size: 0.88rem; line-height: 1.65; }
+.login-hero h2 em { 
+  font-style: italic;
+  color: var(--cream);
+}
+
+.login-hero p { 
+  color: rgba(255,255,255,0.55); 
+  font-size: 0.8rem; 
+  line-height: 1.65; 
+  margin-top: 1.4em;
+}
+
+.login-hero a {
+  color: var(--cream);
+  font-weight: 600;
+  text-decoration: none;
+}
 
 .login-icon { font-size: 3rem; margin-bottom: 16px; animation: sway 4s ease-in-out infinite; }
 
