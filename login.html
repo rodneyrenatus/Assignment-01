@@ -1,38 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to your Cacti-Succulent Kuching account.">
+  <meta name="keywords" content="login, member, cacti kuching">
+  <meta name="author" content="Cacti-Succulent Kuching Team">
+  <title>Login | Cacti-Succulent Kuching</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="cacti succulent 2.png" alt="Brand Logo" width="170">
-    </a>
 
+  <header>
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="images/cacti succulent 2.png" alt="Cacti Succulent Kuching Logo">
+      </a>
+    </div>
     <nav>
-        <a href="product.html">Product</a>
-        <a href="order.html">Order</a>
-        <a href="registration.html">Register</a>
-        <a href="login.html">Login</a>
-        <a href="enquiry.html">Enquiry</a>
-        <a href="Members.html">Members</a>
+      <div class="dropdown">
+        <a href="product1.html" class="dropbtn">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="product1.html">🌵 Cacti</a>
+          <a href="product2.html">🌱 Succulents</a>
+          <a href="product3.html">🪴 Pots &amp; Planters</a>
+          <a href="product4.html">🧰 Accessories</a>
+        </div>
+      </div>
+      <a href="order.html">Order</a>
+      <a href="registration.html">Register</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="Members.html">Members</a>
     </nav>
-    </header>
+  </header>
 
+  <div class="login-wrap">
+    <div class="login-card">
 
-<div class="login-container">
-<h2>Member Login</h2>
+      <div class="login-hero">
+        <div class="login-icon">🪴</div>
+        <h2>Welcome Back,<br><em>Plant Lover!</em></h2>
+        <p>Your little green companions are waiting. Sign in to browse our curated
+           succulents and book a care consultation at Medan Satok.</p>
+        <p style="margin-top:1.4em;font-size:0.8rem;color:rgba(255,255,255,0.55);">
+          Don't have an account yet?<br>
+          <a href="registration.html" style="color:var(--cream);font-weight:600;text-decoration:none;">Register here →</a>
+        </p>
+      </div>
 
-<form>
-    Username: <input type="text" placeholder="Enter username" maxlength="10" required pattern="[a-zA-Z]+">
-    Password: <input type="password" placeholder="Enter password" maxlength="25" required pattern="[a-zA-Z]+">
-    <button type="submit">Login</button>
-</form>
-</div> 
+      <div class="login-form-side">
+        <h1>Member Login</h1>
+        <p class="subtitle">Sign in to your Cacti-Succulent Kuching account.</p>
+
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"
+                   placeholder="Enter username" maxlength="10"
+                   pattern="[a-zA-Z]+" title="Alphabetical only, max 10"
+                   autocomplete="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter password" maxlength="25"
+                   pattern="[a-zA-Z]+" title="Alphabetical only, max 25"
+                   autocomplete="current-password" required>
+          </div>
+          <a href="#" class="forgot">Forgot password?</a>
+          <button type="submit" class="btn-submit" style="width:100%;margin-top:8px;">Sign In</button>
+        </form>
+
+        <div class="divider">or continue with</div>
+        <div class="social-row">
+          <button class="btn-social"><span class="brand-dot brand-google"></span> Google</button>
+          <button class="btn-social"><span class="brand-dot brand-microsoft"></span> Microsoft</button>
+        </div>
+        <p class="login-switch">New here? <a href="registration.html">Create an account</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Cacti-Succulent Kuching. All Rights Reserved.</p>
+    <p>Medan Satok Market, Kuching, Sarawak — Open every weekend</p>
+  </footer>
+
 </body>
 </html>
-

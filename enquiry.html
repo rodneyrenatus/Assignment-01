@@ -1,28 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions???</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send an enquiry to Cacti-Succulent Kuching.">
+  <meta name="keywords" content="enquiry, questions, contact, cacti kuching">
+  <meta name="author" content="Cacti-Succulent Kuching Team">
+  <title>Enquiry | Cacti-Succulent Kuching</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Have Questions??? Ask Away</h1>
 
-    <form>
-        <label for="fname">First Name:  </label>
-        <input type="text" name="fname" id="fname", placeholder="Enter your First Name..." required> <br>
+  <header>
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="images/cacti succulent 2.png" alt="Cacti Succulent Kuching Logo">
+      </a>
+    </div>
+    <nav>
+      <div class="dropdown">
+        <a href="product1.html" class="dropbtn">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="product1.html">🌵 Cacti</a>
+          <a href="product2.html">🌱 Succulents</a>
+          <a href="product3.html">🪴 Pots &amp; Planters</a>
+          <a href="product4.html">🧰 Accessories</a>
+        </div>
+      </div>
+      <a href="order.html">Order</a>
+      <a href="registration.html">Register</a>
+      <a href="login.html">Login</a>
+      <a href="enquiry.html" class="active">Enquiry</a>
+      <a href="Members.html">Members</a>
+    </nav>
+  </header>
 
-        <label for="lname">Last Name:  </label>
-        <input type="text" name="lname" id="lname", placeholder="Enter your Last Name..." required> <br>
+  <main>
+    <div class="form-page-wrap">
+      <h1>Have Questions?</h1>
+      <p class="subtitle">Ask away — we're happy to help with any plant queries.</p>
 
-        <label for="user-email">Email Address: </label>
-        <input type="email", id="user-email", name="user-email" placeholder="example@gmail.com", required><br>
+      <form action="#" method="post">
 
-        <label for="phone"> Phone Number: </label>
-        <input type="tel", id="phone" name="phone" placeholder="012-3456789", required> <br>
+        <div class="form-group">
+          <label for="fname">First Name <span class="required-star">*</span></label>
+          <input type="text" id="fname" name="fname"
+                 placeholder="Enter your First Name"
+                 maxlength="25" pattern="[a-zA-Z]+"
+                 title="Alphabetical characters only, max 25" required>
+        </div>
 
-        <label for="comments">Comments: </label> <br>
-        <textarea name="comments" id="comments", rows="10" cols="50"></textarea>
-    </form>
+        <div class="form-group">
+          <label for="lname">Last Name <span class="required-star">*</span></label>
+          <input type="text" id="lname" name="lname"
+                 placeholder="Enter your Last Name"
+                 maxlength="25" pattern="[a-zA-Z]+"
+                 title="Alphabetical characters only, max 25" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span class="required-star">*</span></label>
+          <input type="email" id="email" name="user-email"
+                 placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number <span class="required-star">*</span></label>
+          <input type="tel" id="phone" name="phone"
+                 placeholder="012-3456789"
+                 pattern="[0-9]{8,10}" maxlength="10"
+                 title="8 to 10 digits only" required>
+        </div>
+
+        <!-- Assignment spec: enquiry select from product/service list -->
+        <div class="form-group">
+          <label for="enquiry-type">Enquiry About <span class="required-star">*</span></label>
+          <select id="enquiry-type" name="enquiry-type" required>
+            <option value="">-- Select a topic --</option>
+            <optgroup label="Products">
+              <option value="cacti">Cacti</option>
+              <option value="succulents">Succulents</option>
+              <option value="pots">Pots &amp; Planters</option>
+              <option value="accessories">Accessories &amp; Soil</option>
+              <option value="gift-bundles">Gift Bundles</option>
+            </optgroup>
+            <optgroup label="Services">
+              <option value="care-consult">Plant Care Consultation</option>
+              <option value="delivery">Delivery &amp; Shipping</option>
+              <option value="pickup">Medan Satok Pickup</option>
+              <option value="wholesale">Wholesale / Bulk Orders</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="general">General Enquiry</option>
+              <option value="feedback">Feedback</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea id="comments" name="comments" rows="6"
+                    placeholder="Write your message here..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Send Enquiry</button>
+          <button type="reset" class="btn-reset">Clear Form</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cacti-Succulent Kuching. All Rights Reserved.</p>
+    <p>Medan Satok Market, Kuching, Sarawak — Open every weekend</p>
+  </footer>
+
 </body>
 </html>

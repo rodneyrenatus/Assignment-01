@@ -1,35 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register a new account with Cacti-Succulent Kuching.">
+  <meta name="keywords" content="register, sign up, cacti kuching">
+  <meta name="author" content="Cacti-Succulent Kuching Team">
+  <title>Register | Cacti-Succulent Kuching</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Registration Form</h1>
 
-    <form>
-        <label for="fname">First name: </label>
-        <input type="text", id="fname", name="fname", placeholder="Enter your First Name.", required><br>
+  <header>
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="images/cacti succulent 2.png" alt="Cacti Succulent Kuching Logo">
+      </a>
+    </div>
+    <nav>
+      <div class="dropdown">
+        <a href="product1.html" class="dropbtn">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="product1.html">🌵 Cacti</a>
+          <a href="product2.html">🌱 Succulents</a>
+          <a href="product3.html">🪴 Pots &amp; Planters</a>
+          <a href="product4.html">🧰 Accessories</a>
+        </div>
+      </div>
+      <a href="order.html">Order</a>
+      <a href="registration.html" class="active">Register</a>
+      <a href="login.html">Login</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="Members.html">Members</a>
+    </nav>
+  </header>
 
-        <label for="lname">Last name: </label>
-        <input type="text", id="lname", name="lname", placeholder="Enter your Last Name.", required><br>
+  <main>
+    <div class="form-page-wrap">
+      <h1>Create an Account</h1>
+      <p class="subtitle">Join Cacti-Succulent Kuching and start your plant journey.</p>
 
-        <label for="user-email">Email Address: </label>
-        <input type="email", id="user-email", name="user-email" placeholder="example@gmail.com", required><br>
+      <form action="#" method="post">
+
+        <div class="form-group">
+          <label for="fname">First Name <span class="required-star">*</span></label>
+          <input type="text" id="fname" name="fname"
+                 placeholder="Enter your First Name"
+                 maxlength="25" pattern="[a-zA-Z]+"
+                 title="Alphabetical characters only, max 25" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lname">Last Name <span class="required-star">*</span></label>
+          <input type="text" id="lname" name="lname"
+                 placeholder="Enter your Last Name"
+                 maxlength="25" pattern="[a-zA-Z]+"
+                 title="Alphabetical characters only, max 25" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span class="required-star">*</span></label>
+          <input type="email" id="email" name="user-email"
+                 placeholder="example@gmail.com" required>
+        </div>
 
         <fieldset>
-            <legend>Address</legend>
-          
-            <label for="street">Street Address:</label>
-            <input type="text" id="street" name="street" maxlength="40", required> <br>
-          
-            <label for="city">City/Town:</label>
-            <input type="text" id="city" name="city" maxlength="20", required> <br>
-          
-            <label for="state">State:</label>
-            <select id="state" name="state">
-              <option value="">--Select State--</option>
+          <legend>Address</legend>
+
+          <div class="form-group">
+            <label for="street">Street Address <span class="required-star">*</span></label>
+            <input type="text" id="street" name="street" maxlength="40" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City / Town <span class="required-star">*</span></label>
+            <input type="text" id="city" name="city" maxlength="20" required>
+          </div>
+
+          <div class="form-group">
+            <label for="state">State <span class="required-star">*</span></label>
+            <select id="state" name="state" required>
+              <option value="">-- Select State --</option>
               <option value="Johor">Johor</option>
               <option value="Kedah">Kedah</option>
               <option value="Kelantan">Kelantan</option>
@@ -46,16 +97,38 @@
               <option value="Kuala Lumpur">W.P. Kuala Lumpur</option>
               <option value="Labuan">W.P. Labuan</option>
               <option value="Putrajaya">W.P. Putrajaya</option>
-            </select> <br>
-          
-            <label for="postcode">Postcode:</label>
-            <input type="text" id="postcode" name="postcode" pattern="\d{5}" title="Please enter exactly 5 digits" maxlength="5", required>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="postcode">Postcode <span class="required-star">*</span></label>
+            <input type="text" id="postcode" name="postcode"
+                   pattern="\d{5}" title="Exactly 5 digits"
+                   maxlength="5" placeholder="e.g. 93000" required>
+          </div>
         </fieldset>
 
-        <label for="phone"> Phone Number: </label>
-        <input type="tel", id="phone" name="phone" placeholder="012-3456789", required> <br>
+        <div class="form-group">
+          <label for="phone">Phone Number <span class="required-star">*</span></label>
+          <input type="tel" id="phone" name="phone"
+                 placeholder="012-3456789"
+                 pattern="[0-9]{8,10}" maxlength="10"
+                 title="8 to 10 digits only" required>
+        </div>
 
-        <input type="button" value="Submit">
-    </form>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Create Account</button>
+          <button type="reset" class="btn-reset">Clear Form</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cacti-Succulent Kuching. All Rights Reserved.</p>
+    <p>Medan Satok Market, Kuching, Sarawak — Open every weekend</p>
+  </footer>
+
 </body>
 </html>
