@@ -31,7 +31,7 @@
       <a href="registration.html">Register</a>
       <a href="login.html">Login</a>
       <a href="enquiry.html">Enquiry</a>
-      <a href="Members.html">Members</a>
+      <a href="members.html">Members</a>
     </nav>
   </header>
 
@@ -98,55 +98,114 @@
           </div>
         </fieldset>
 
-        <!-- Product Selection — each product has its own section with radio buttons -->
+        <!-- Product Selection — checkboxes with per-item quantity counters -->
         <fieldset>
-          <legend>Select a Product <span class="required-star">*</span></legend>
+          <legend>Select Products <span class="required-star">*</span></legend>
 
           <div class="order-product-section">
             <h3>🌵 Cacti</h3>
-            <div class="radio-group">
-              <label><input type="radio" name="product" value="mammillaria" required> Mammillaria — RM 6.00</label>
-              <label><input type="radio" name="product" value="opuntia"> Opuntia microdasys — RM 9.90</label>
-              <label><input type="radio" name="product" value="astrophytum"> Astrophytum — RM 23.80</label>
-              <label><input type="radio" name="product" value="ariocarpus"> Ariocarpus — RM 29.10</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="product_mammillaria" value="mammillaria">
+                Mammillaria — RM 6.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_mammillaria" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_opuntia" value="opuntia">
+                Opuntia microdasys — RM 9.90
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_opuntia" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_astrophytum" value="astrophytum">
+                Astrophytum — RM 23.80
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_astrophytum" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_ariocarpus" value="ariocarpus">
+                Ariocarpus — RM 29.10
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_ariocarpus" min="0" max="50" value="0" class="qty-input">
+              </label>
             </div>
           </div>
 
           <div class="order-product-section">
             <h3>🌱 Succulents</h3>
-            <div class="radio-group">
-              <label><input type="radio" name="product" value="echeveria"> Echeveria — RM 8.00</label>
-              <label><input type="radio" name="product" value="haworthia"> Haworthia — RM 12.00</label>
-              <label><input type="radio" name="product" value="aloe_vera"> Aloe Vera — RM 10.00</label>
-              <label><input type="radio" name="product" value="sedum"> Sedum — RM 9.00</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="product_echeveria" value="echeveria">
+                Echeveria — RM 8.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_echeveria" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_haworthia" value="haworthia">
+                Haworthia — RM 12.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_haworthia" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_aloe" value="aloe_vera">
+                Aloe Vera — RM 10.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_aloe" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_sedum" value="sedum">
+                Sedum — RM 9.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_sedum" min="0" max="50" value="0" class="qty-input">
+              </label>
             </div>
           </div>
 
           <div class="order-product-section">
             <h3>🪴 Pots &amp; Planters</h3>
-            <div class="radio-group">
-              <label><input type="radio" name="product" value="terracotta_small"> Terracotta Pot (Small) — RM 5.00</label>
-              <label><input type="radio" name="product" value="terracotta_large"> Terracotta Pot (Large) — RM 12.00</label>
-              <label><input type="radio" name="product" value="ceramic_pot"> Ceramic Decorative Pot — RM 18.00</label>
-              <label><input type="radio" name="product" value="hanging_planter"> Hanging Planter — RM 22.00</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="product_terra_s" value="terracotta_small">
+                Terracotta Pot (Small) — RM 5.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_terra_s" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_terra_l" value="terracotta_large">
+                Terracotta Pot (Large) — RM 12.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_terra_l" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_ceramic" value="ceramic_pot">
+                Ceramic Decorative Pot — RM 18.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_ceramic" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_hanging" value="hanging_planter">
+                Hanging Planter — RM 22.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_hanging" min="0" max="50" value="0" class="qty-input">
+              </label>
             </div>
           </div>
 
           <div class="order-product-section">
             <h3>🧰 Accessories</h3>
-            <div class="radio-group">
-              <label><input type="radio" name="product" value="soil"> Succulent Soil Mix (2kg) — RM 15.00</label>
-              <label><input type="radio" name="product" value="fertiliser"> Cactus Fertiliser — RM 12.00</label>
-              <label><input type="radio" name="product" value="watering_can"> Mini Watering Can — RM 20.00</label>
-              <label><input type="radio" name="product" value="gift_bundle"> Gift Bundle Set — RM 35.00</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="product_soil" value="soil">
+                Succulent Soil Mix (2kg) — RM 15.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_soil" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_fert" value="fertiliser">
+                Cactus Fertiliser — RM 12.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_fert" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_can" value="watering_can">
+                Mini Watering Can — RM 20.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_can" min="0" max="50" value="0" class="qty-input">
+              </label>
+              <label>
+                <input type="checkbox" name="product_gift" value="gift_bundle">
+                Gift Bundle Set — RM 35.00
+                <span class="qty-label">Qty:</span> <input type="number" name="qty_gift" min="0" max="50" value="0" class="qty-input">
+              </label>
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="quantity">Quantity <span class="required-star">*</span></label>
-            <input type="number" id="quantity" name="quantity"
-                   min="1" max="50" value="1" required>
-          </div>
         </fieldset>
 
         <!-- Delivery Mode -->
@@ -197,7 +256,7 @@
 
           <div class="form-group">
             <label class="checkbox-label">
-              <input type="checkbox" id = "checkbox" name="agree_terms" value="yes" required>
+              <input type="checkbox" id="checkbox" name="agree_terms" value="yes" required>
               I agree to the <a href="index.html">Terms &amp; Conditions</a>
               <span class="required-star">*</span>
             </label>
