@@ -31,6 +31,8 @@
 </head>
 <body>
 
+  <div id="top"></div>
+
   <header>
     <div class="logo-area">
       <a href="index.html">
@@ -81,11 +83,14 @@
          without JavaScript.</p>
 
       <p><strong>Code used (in style.css):</strong></p>
-      <pre class="code-block"><code>header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}</code></pre>
+      <pre class="code-block">
+        <code>header {
+          position: sticky;
+          top: 0;
+          z-index: 100;
+        }
+        </code>
+      </pre>
 
       <p><strong>Where to see it:</strong>
          <a href="index.html">index.html</a> — scroll down the homepage and the green header
@@ -111,17 +116,20 @@
          taught in labs.</p>
 
       <p><strong>Code used (in style.css):</strong></p>
-      <pre class="code-block"><code>.dropdown-content {
-  display: none;
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  z-index: 200;
-}
+      <pre class="code-block">
+        <code>.dropdown-content {
+          display: none;
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 0;
+          z-index: 200;
+        }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}</code></pre>
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        </code>
+      </pre>
 
       <p><strong>Where to see it:</strong>
          <a href="product1.html#care-tips">product1.html</a> — hover over the
@@ -147,22 +155,28 @@
          frame responsive (100% width, fixed height, rounded corners).</p>
 
       <p><strong>Code used (in member1.html):</strong></p>
-      <pre class="code-block"><code>&lt;iframe
-  class="map-embed"
-  src="https://maps.google.com/maps?q=Petra+Jaya,+Kuching,+Sarawak&amp;output=embed&amp;z=14"
-  allowfullscreen=""
-  loading="lazy"
-  title="Petra Jaya, Kuching"&gt;
-&lt;/iframe&gt;</code></pre>
+      <pre class="code-block">
+        <code>&lt;iframe
+          class="map-embed"
+          src="https://maps.google.com/maps?q=Petra+Jaya,+Kuching,+Sarawak&amp;output=embed&amp;z=14"
+          allowfullscreen=""
+          loading="lazy"
+          title="Petra Jaya, Kuching"&gt;
+        &lt;/iframe&gt;
+        </code>
+      </pre>
 
       <p><strong>CSS (in style.css):</strong></p>
-      <pre class="code-block"><code>.map-embed {
-  width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 10px;
-  display: block;
-}</code></pre>
+      <pre class="code-block">
+        <code>.map-embed {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            display: block;
+          }
+        </code>
+      </pre>
 
       <p><strong>Where to see it:</strong>
          <a href="member1.html#map">member1.html</a> — scroll to the
@@ -192,14 +206,17 @@
          are beyond the scope of the lab sheets.</p>
 
       <p><strong>Code used (in style.css):</strong></p>
-      <pre class="code-block"><code>.product-card {
-  transition: transform 0.25s, box-shadow 0.25s;
-}
+      <pre class="code-block">
+        <code>.product-card {
+          transition: transform 0.25s, box-shadow 0.25s;
+        }
 
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(40,70,50,0.18);
-}</code></pre>
+        .product-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 40px rgba(40,70,50,0.18);
+        }
+        </code>
+      </pre>
 
       <p><strong>Where to see it:</strong>
          <a href="product1.html#products">product1.html</a> — hover over any cactus product
@@ -208,6 +225,59 @@
          <a href="product3.html">product3.html</a>,
          <a href="product4.html">product4.html</a>) and on the
          <a href="members.html">members.html</a> team cards.</p>
+    </div>
+
+    <!-- Enhancement 5 -->
+    <div class="enhancement-item">
+      <h3>Enhancement 5 — Fixed "Back to Top" Button</h3>
+
+      <p><strong>What it does:</strong> A small floating button labelled <em>⬆ Top</em> is
+         fixed to the bottom-right corner of every page. Clicking it instantly scrolls the
+         user back to the top of the page without requiring any JavaScript — it uses a plain
+         anchor link targeting a hidden <code>div#top</code> placed at the very start of the
+         <code>&lt;body&gt;</code>.</p>
+
+      <p><strong>How it goes beyond the basics:</strong> The lab exercises only covered static
+         inline and block-level elements. This enhancement uses <code>position: fixed</code>
+         to pin an element to the viewport regardless of scroll position, combined with
+         <code>border-radius</code>, <code>box-shadow</code>, and a <code>transition</code>
+         on the hover state to produce a polished pill-shaped button — none of which were
+         introduced in the tutorial sheets.</p>
+
+      <p><strong>HTML used:</strong></p>
+      <pre class="code-block">
+        <code>&lt;div id="top"&gt;&lt;/div&gt;
+
+&lt;a href="#top" class="top-btn"&gt;⬆ Top&lt;/a&gt;
+        </code>
+      </pre>
+
+      <p><strong>CSS used:</strong></p>
+      <pre class="code-block">
+        <code>.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2f4f4f;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.top-btn:hover {
+  background: #1e3a3a;
+  transform: translateY(-3px);
+}
+        </code>
+      </pre>
+
+      <p><strong>Where to see it:</strong> The button is visible on this page — scroll down
+         and look for the dark pill-shaped <em>⬆ Top</em> button in the bottom-right corner.
+         Clicking it returns you to the top instantly.</p>
     </div>
 
   </main>
@@ -250,6 +320,9 @@
       <p>&copy; 2026 Cacti-Succulent Kuching. All Rights Reserved.</p>
     </div>
   </footer>
+
+
+  <a href="#top" class="top-btn">⬆ Top</a>
 
 </body>
 </html>
