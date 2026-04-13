@@ -22,6 +22,7 @@
   --green-dark:   #3a7a4e;
   --green-light:  #d0e8d8;
   --cream:        #F2E3BB;
+  --cream-light:  #f7f3e9;
   --cream-dark:   #e8d09a;
   --text-dark:    #2a3d2e;
   --text-mid:     #4a6350;
@@ -38,7 +39,7 @@
 body {
   font-family: 'Jost', sans-serif;
   color: var(--text-dark);
-  background-color: var(--cream);
+  background-color: var(--cream-light);
   line-height: 1.7;
   min-height: 100vh;
   display: flex;
@@ -80,9 +81,9 @@ a:hover {
   text-decoration: underline; 
 }
 
-a:visited { 
+/*a:visited { 
   color: var(--green-dark); 
-}
+}*/
 
 ul, ol { 
   padding-left: 1.5em; 
@@ -176,12 +177,12 @@ nav a.active {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 5px);
   left: 0;
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
-  min-width: 200px;
+  min-width: 175px;
   overflow: hidden;
   z-index: 200;
 }
@@ -214,24 +215,85 @@ main {
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
-/* Assignment spec: full width, footer text italic and centred */
 footer {
-  background-color: var(--cream);
-  border-top: 1.5px solid var(--cream-dark);
-  text-align: center;
-  font-style: italic;
-  padding: 18px 5%;
+  background-color: #F2E3BB;
+  color: #519A66;
+  font-size: 0.87rem;
   width: 100%;
-  color: var(--text-mid);
-  font-size: 0.85rem;
+  border-top: 5px solid #519A66;
 }
 
-footer a { 
-  color: var(--green);
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 5%;
 }
 
-footer a:hover { 
-  color: var(--green-dark); 
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  color: #519A66;
+  font-size: 1rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  color: rgba(81, 154, 102, 0.85);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: rgba(81, 154, 102, 0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #519A66;
+  text-decoration: underline;
+}
+
+.yt-link {
+  display: inline-block;
+  background: #ff0000;
+  color: #fff !important;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  margin-top: 10px;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.yt-link:hover {
+  background: #cc0000;
+  transform: translateY(-1px);
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(81, 154, 102, 0.25);
+  text-align: center;
+  padding: 18px 5%;
+  color: rgba(81, 154, 102, 0.65);
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 /* ─── HERO (index + product pages) ───────────────────────── */
@@ -242,9 +304,8 @@ footer a:hover {
   overflow: hidden;
 }
 
-/* Assignment spec: index page must display a background graphic */
+
 .hero-index {
-  background-image: url('../images/collectionofcacti.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -254,7 +315,6 @@ footer a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(242,227,187,0.92) 40%, rgba(242,227,187,0.4) 100%);
 }
 
 .hero-container {
@@ -370,14 +430,23 @@ footer a:hover {
 
 
 /* ─── PRODUCT GRID ───────────────────────────────────────── */
-.product-showcase { 
-  padding: 50px 0; 
+.product-showcase {
+  padding: 50px 4%;
+  background: var(--cream-light);
+}
+
+.product-showcase .section-header {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .product-card {
@@ -512,7 +581,7 @@ footer a:hover {
 aside {
   width: 30%;
   float: right;
-  background: var(--white);
+  background: rgba(242, 227, 187, 0.45);
   border: 2px solid var(--green);
   border-radius: var(--radius);
   padding: 20px 22px;
@@ -536,7 +605,7 @@ aside ul {
 }
 
 aside p{
-  background: #f0f7f2;
+  background: rgba(81, 154, 102, 0.1);
   border-radius: 6px;
   padding: 8px 12px;
   font-size: 0.85rem;
@@ -548,7 +617,7 @@ aside p{
 .content-clearfix::after { 
   content: ''; 
   display: block; 
-  clear: both; 
+  clear: both;
 }
 
 .detail-box {
@@ -611,8 +680,8 @@ td {
   color: var(--text-dark);
 }
 
-tr:nth-child(even) td { 
-  background: #f6fbf7; 
+tr:nth-child(even) td {
+  background: rgba(242, 227, 187, 0.35);
 }
 
 tr:hover td { 
@@ -664,7 +733,7 @@ tr:hover td {
   font-family: 'Jost', sans-serif;
   font-size: 0.9rem;
   color: var(--text-dark);
-  background: #f9fdf9;
+  background: rgba(242, 227, 187, 0.2);
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   appearance: none;
