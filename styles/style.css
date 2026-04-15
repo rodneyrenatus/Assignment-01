@@ -1,6 +1,6 @@
 /*
   file:        style.css
-  author:      Cacti-Succulent Kuching Team
+  author:      Cacti-Succulent Kuching Team (Mohd Amirunhisyam, Maduwa Guruge Savindu Helitha Jayasinghe, Aavash Sherchan, Rodeny Renatus Mushi.)
   created:     2026
   description: Single shared stylesheet for all pages of the
                Cacti-Succulent Kuching website (COS10026 Assignment 1).
@@ -306,6 +306,7 @@ footer {
 
 
 .hero-index {
+  background-image: url(../images/succulent.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -315,6 +316,7 @@ footer {
   content: '';
   position: absolute;
   inset: 0;
+  background: rgba(232, 243, 236, 0.82);
 }
 
 .hero-container {
